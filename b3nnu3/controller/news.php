@@ -25,8 +25,8 @@ class news extends defaults\database_frontend
 
     protected function init()
     {
-        $this->newsmodel = $this->_container->get('model_news');
-        $this->categorysmodel = $this->_container->get('model_news_categories');
+        $this->newsmodel = $this->_container['model_news'];
+        $this->categorysmodel = $this->_container['model_news_categories'];
 
     }
 

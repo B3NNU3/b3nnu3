@@ -30,6 +30,6 @@ abstract class model
     public function __construct(Container $container)
     {
         $this->_container = $container;
-        $this->db = $this->_container->get('database');
+        $this->db = $this->_container['database'];
     }
 }

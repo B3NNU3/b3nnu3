@@ -8,18 +8,15 @@ class models
 {
 
     const MODELDIR = "/b3nnu3/model/";
+    static public $class;
 
-    static private $instances = array();
     /**
      * @var Container
-     * 
-     * TODO build Models
      */
     static private $container;
 
     static public function inject(Container &$container)
     {
-        return;
         self::$container = $container;
         $modelroot = __ROOTDIR__ . self::MODELDIR;
         $iterator = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($modelroot));
@@ -27,6 +24,11 @@ class models
     }
 
 
+    /**
+     * create a pimple_call for every model in filetree
+     * 
+     * @param $i
+     */
     static public function iterateDirectory($i)
     {
         foreach ($i as $path) {
@@ -39,21 +41,13 @@ class models
                 $search = array(self::MODELDIR, __ROOTDIR__, "/", ".php");
                 $replace = array("", "", '_', "");
                 $containername = "model_" . str_replace($search, $replace, $path);
-//                if ($containername != "model_defaults_model") {
-//                    self::$container[$containername] = function($c){
-//                        return self::getInstance($class);    
-//                    }
-//                    
-//                }
+                
+                if ($containername != "model_defaults_model" ) {
+                    self::$container[$containername] = function($c) use ($class){
+                        return new $class($c);                        
+                    };                    
+                }
             }
         }
-    }
-
-    static public function getInstance($className)
-    {
-        if (!isset(self::$instances[$className])) {
-            self::$instances[$className] = new $className(self::$container);
-        }
-        return self::$instances[$className];
     }
 }
