@@ -1,7 +1,7 @@
 <?php
 namespace b3nnu3\model\defaults;
 
-use Symfony\Component\DependencyInjection\Container;
+use \Pimple\Container;
 use \voku\db\DB;
 
 /**

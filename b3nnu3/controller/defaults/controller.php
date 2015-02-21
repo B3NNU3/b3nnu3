@@ -2,7 +2,7 @@
 
 namespace b3nnu3\controller\defaults;
 
-use Symfony\Component\DependencyInjection\Container;
+use \Pimple\Container;
 use Symfony\Component\HttpFoundation\Request;
 use \Symfony\Component\HttpFoundation\Response;
 
@@ -65,7 +65,7 @@ abstract class controller
 
         $this->_container = $container;
 
-        $app = $this->_container->get('app');
+        $app = $this->_container['app'];
         $this->_request = $app->getRequest();
         $this->_defineResponse();
         $this->init();

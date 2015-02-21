@@ -2,7 +2,7 @@
 
 namespace b3nnu3\core\dependencies;
 
-use \Symfony\Component\DependencyInjection\Container;
+use \Pimple\Container;
 
 class smarty implements \b3nnu3\core\interfaces\dependency
 {
@@ -14,21 +14,23 @@ class smarty implements \b3nnu3\core\interfaces\dependency
 
     private static function _initSmarty(Container &$container)
     {
-        $app = $container->get('app');
-        $options = $app->config->getSmarty();
+        $container['smarty'] = function ($c) {
+            $app = $c['app'];
+            $options = $app->config->getSmarty();
 
-        $smarty = new \Smarty;
-        $smarty->caching = $options['caching'];
-        $smarty->compile_check = $options['compile_check'];
-        if ($options['clearAllCache']) {
-            $smarty->clearAllCache();
-        }
-        $smarty->template_dir = $options['template_dir'];
-        $smarty->compile_dir = $options['compile_dir'];
-        $smarty->config_dir = $options['config_dir'];
-        $smarty->cache_dir = $options['cache_dir'];
-        self::_addSmartyPlugins($smarty);
-        $container->set('smarty', $smarty, Container::SCOPE_CONTAINER);
+            $smarty = new \Smarty;
+            $smarty->caching = $options['caching'];
+            $smarty->compile_check = $options['compile_check'];
+            if ($options['clearAllCache']) {
+                $smarty->clearAllCache();
+            }
+            $smarty->template_dir = $options['template_dir'];
+            $smarty->compile_dir = $options['compile_dir'];
+            $smarty->config_dir = $options['config_dir'];
+            $smarty->cache_dir = $options['cache_dir'];
+            self::_addSmartyPlugins($smarty);
+            return $smarty;
+        };
     }
 
     private static function _addSmartyPlugins(\Smarty &$smarty)

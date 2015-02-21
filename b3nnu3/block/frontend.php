@@ -3,7 +3,6 @@
 namespace b3nnu3\block;
 
 use b3nnu3\core\dependencies\smarty;
-use \Symfony\Component\DependencyInjection\Container;
 
 abstract class frontend
 {

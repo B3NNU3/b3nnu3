@@ -4,20 +4,59 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4d8729fd8cac1fbff3d219495311acad",
+    "hash": "9fe45b4e1cf114ef1dfe6502b6c9ad91",
     "packages": [
+        {
+            "name": "erusev/parsedown",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/erusev/parsedown.git",
+                "reference": "65116c3cb0953447eac742aa4ea5fc4aaaa22db9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/65116c3cb0953447eac742aa4ea5fc4aaaa22db9",
+                "reference": "65116c3cb0953447eac742aa4ea5fc4aaaa22db9",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Parsedown": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Emanuil Rusev",
+                    "email": "hello@erusev.com",
+                    "homepage": "http://erusev.com"
+                }
+            ],
+            "description": "Parser for Markdown.",
+            "homepage": "http://parsedown.org",
+            "keywords": [
+                "markdown",
+                "parser"
+            ],
+            "time": "2015-02-08 23:04:08"
+        },
         {
             "name": "monolog/monolog",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "7583a2b96b9fda7ece90e34a23cd46e4858b3352"
+                "reference": "f05ed3a44a8e40533d4cf60a0669db6b1887b499"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/7583a2b96b9fda7ece90e34a23cd46e4858b3352",
-                "reference": "7583a2b96b9fda7ece90e34a23cd46e4858b3352",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/f05ed3a44a8e40533d4cf60a0669db6b1887b499",
+                "reference": "f05ed3a44a8e40533d4cf60a0669db6b1887b499",
                 "shasum": ""
             },
             "require": {
@@ -76,7 +115,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2015-01-29 16:05:08"
+            "time": "2015-02-11 14:20:33"
         },
         {
             "name": "oyejorge/less.php",
@@ -84,7 +123,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oyejorge/less.php",
-                "reference": "0751741c0c25a506bfedb6569172e87d57832a20"
+                "reference": "e6b2990704a533c025811849beef8dd52e16e1e2"
             },
             "require": {
                 "php": ">=5.2"
@@ -128,7 +167,103 @@
                 "php",
                 "stylesheet"
             ],
-            "time": "2014-07-19 21:51:20"
+            "time": "2015-02-15 22:41:01"
+        },
+        {
+            "name": "pimple/pimple",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silexphp/Pimple.git",
+                "reference": "2bcd90124a31bcf61804b9eb5badb85679469921"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/2bcd90124a31bcf61804b9eb5badb85679469921",
+                "reference": "2bcd90124a31bcf61804b9eb5badb85679469921",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Pimple": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Pimple is a simple Dependency Injection Container for PHP 5.3",
+            "homepage": "http://pimple.sensiolabs.org",
+            "keywords": [
+                "container",
+                "dependency injection"
+            ],
+            "time": "2015-01-26 16:18:50"
+        },
+        {
+            "name": "predis/predis",
+            "version": "1.0.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nrk/predis.git",
+                "reference": "c4c36cae7ab09bdeef7f85b1c3d55fe120aa1117"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nrk/predis/zipball/c4c36cae7ab09bdeef7f85b1c3d55fe120aa1117",
+                "reference": "c4c36cae7ab09bdeef7f85b1c3d55fe120aa1117",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "suggest": {
+                "ext-curl": "Allows access to Webdis when paired with phpiredis",
+                "ext-phpiredis": "Allows faster serialization and deserialization of the Redis protocol"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Predis\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniele Alessandri",
+                    "email": "suppakilla@gmail.com",
+                    "homepage": "http://clorophilla.net"
+                }
+            ],
+            "description": "Flexible and feature-complete PHP client library for Redis",
+            "homepage": "http://github.com/nrk/predis",
+            "keywords": [
+                "nosql",
+                "predis",
+                "redis"
+            ],
+            "time": "2015-01-02 12:54:29"
         },
         {
             "name": "psr/log",
@@ -179,7 +314,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/smarty-php/smarty",
-                "reference": "05f5ddf573f3fbcbf923fd4b486fee121d415108"
+                "reference": "464b37c0538efb237b92f24fccbf1ba16d779e33"
             },
             "require": {
                 "php": ">=5.2"
@@ -224,7 +359,7 @@
                 "issues": "http://code.google.com/p/smarty-php/issues/list",
                 "forum": "http://www.smarty.net/forums/"
             },
-            "time": "2015-02-09 22:52:25"
+            "time": "2015-02-15 15:58:42"
         },
         {
             "name": "smottt/wideimage",
@@ -249,203 +384,26 @@
             "time": "2014-10-05 14:59:53"
         },
         {
-            "name": "symfony/debug",
-            "version": "2.7.x-dev",
-            "target-dir": "Symfony/Component/Debug",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/Debug.git",
-                "reference": "39a94beb5ea7f5f39854e7c8ab8dfda95e831f5d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Debug/zipball/39a94beb5ea7f5f39854e7c8ab8dfda95e831f5d",
-                "reference": "39a94beb5ea7f5f39854e7c8ab8dfda95e831f5d",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.9",
-                "psr/log": "~1.0"
-            },
-            "conflict": {
-                "symfony/http-kernel": ">=2.3,<2.3.24|~2.4.0|>=2.5,<2.5.9|>=2.6,<2.6.2"
-            },
-            "require-dev": {
-                "symfony/class-loader": "~2.2",
-                "symfony/http-foundation": "~2.1|~3.0.0",
-                "symfony/http-kernel": "~2.3.24|~2.5.9|~2.6,>=2.6.2|~3.0.0"
-            },
-            "suggest": {
-                "symfony/http-foundation": "",
-                "symfony/http-kernel": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.7-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Symfony\\Component\\Debug\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "Symfony Debug Component",
-            "homepage": "http://symfony.com",
-            "time": "2015-01-25 04:39:35"
-        },
-        {
-            "name": "symfony/dependency-injection",
-            "version": "2.7.x-dev",
-            "target-dir": "Symfony/Component/DependencyInjection",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/DependencyInjection.git",
-                "reference": "acf2e8e27c53b8af7963ca00809ccde1d1e977f4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/DependencyInjection/zipball/acf2e8e27c53b8af7963ca00809ccde1d1e977f4",
-                "reference": "acf2e8e27c53b8af7963ca00809ccde1d1e977f4",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.9"
-            },
-            "conflict": {
-                "symfony/expression-language": "<2.6"
-            },
-            "require-dev": {
-                "symfony/config": "~2.2|~3.0.0",
-                "symfony/expression-language": "~2.6|~3.0.0",
-                "symfony/yaml": "~2.1|~3.0.0"
-            },
-            "suggest": {
-                "symfony/config": "",
-                "symfony/proxy-manager-bridge": "Generate service proxies to lazy load them",
-                "symfony/yaml": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.7-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Symfony\\Component\\DependencyInjection\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "Symfony DependencyInjection Component",
-            "homepage": "http://symfony.com",
-            "time": "2015-01-25 04:39:35"
-        },
-        {
-            "name": "symfony/event-dispatcher",
-            "version": "2.7.x-dev",
-            "target-dir": "Symfony/Component/EventDispatcher",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "e9298668dce8dd219d1ee2290c7f313954f1f984"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/e9298668dce8dd219d1ee2290c7f313954f1f984",
-                "reference": "e9298668dce8dd219d1ee2290c7f313954f1f984",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.9"
-            },
-            "require-dev": {
-                "psr/log": "~1.0",
-                "symfony/config": "~2.0,>=2.0.5|~3.0.0",
-                "symfony/dependency-injection": "~2.6|~3.0.0",
-                "symfony/expression-language": "~2.6|~3.0.0",
-                "symfony/stopwatch": "~2.3|~3.0.0"
-            },
-            "suggest": {
-                "symfony/dependency-injection": "",
-                "symfony/http-kernel": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.7-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Symfony\\Component\\EventDispatcher\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "Symfony EventDispatcher Component",
-            "homepage": "http://symfony.com",
-            "time": "2015-02-05 06:58:17"
-        },
-        {
             "name": "symfony/http-foundation",
             "version": "2.7.x-dev",
             "target-dir": "Symfony/Component/HttpFoundation",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpFoundation.git",
-                "reference": "3386d660f950aff4e31db69dcc3cdc5aa741095a"
+                "reference": "a32879884aec9b107e6486af282a4a76f9af0db6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/3386d660f950aff4e31db69dcc3cdc5aa741095a",
-                "reference": "3386d660f950aff4e31db69dcc3cdc5aa741095a",
+                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/a32879884aec9b107e6486af282a4a76f9af0db6",
+                "reference": "a32879884aec9b107e6486af282a4a76f9af0db6",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.9"
             },
             "require-dev": {
-                "symfony/expression-language": "~2.4|~3.0.0"
+                "symfony/expression-language": "~2.4|~3.0.0",
+                "symfony/phpunit-bridge": "~2.7|~3.0.0"
             },
             "type": "library",
             "extra": {
@@ -477,65 +435,85 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "http://symfony.com",
-            "time": "2015-02-08 07:21:15"
+            "time": "2015-02-21 13:05:27"
         },
         {
-            "name": "symfony/http-kernel",
-            "version": "2.7.x-dev",
-            "target-dir": "Symfony/Component/HttpKernel",
+            "name": "voku/portable-utf8",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/HttpKernel.git",
-                "reference": "50221bd35d39c106fc15043ff261cde97d515b4f"
+                "url": "https://github.com/voku/portable-utf8.git",
+                "reference": "73296dac9f54c597be188618b98fcea904e35571"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/50221bd35d39c106fc15043ff261cde97d515b4f",
-                "reference": "50221bd35d39c106fc15043ff261cde97d515b4f",
+                "url": "https://api.github.com/repos/voku/portable-utf8/zipball/73296dac9f54c597be188618b98fcea904e35571",
+                "reference": "73296dac9f54c597be188618b98fcea904e35571",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.9",
-                "psr/log": "~1.0",
-                "symfony/debug": "~2.6,>=2.6.2|~3.0.0",
-                "symfony/event-dispatcher": "~2.5.9|~2.6,>=2.6.2|~3.0.0",
-                "symfony/http-foundation": "~2.5,>=2.5.4|~3.0.0"
+                "php": ">=5.3.0"
             },
             "require-dev": {
-                "symfony/browser-kit": "~2.3|~3.0.0",
-                "symfony/class-loader": "~2.1|~3.0.0",
-                "symfony/config": "~2.0,>=2.0.5|~3.0.0",
-                "symfony/console": "~2.3|~3.0.0",
-                "symfony/css-selector": "~2.0,>=2.0.5|~3.0.0",
-                "symfony/dependency-injection": "~2.2|~3.0.0",
-                "symfony/dom-crawler": "~2.0,>=2.0.5|~3.0.0",
-                "symfony/expression-language": "~2.4|~3.0.0",
-                "symfony/finder": "~2.0,>=2.0.5|~3.0.0",
-                "symfony/process": "~2.0,>=2.0.5|~3.0.0",
-                "symfony/routing": "~2.2|~3.0.0",
-                "symfony/stopwatch": "~2.3|~3.0.0",
-                "symfony/templating": "~2.2|~3.0.0",
-                "symfony/translation": "~2.0,>=2.0.5|~3.0.0",
-                "symfony/var-dumper": "~2.6|~3.0.0"
-            },
-            "suggest": {
-                "symfony/browser-kit": "",
-                "symfony/class-loader": "",
-                "symfony/config": "",
-                "symfony/console": "",
-                "symfony/dependency-injection": "",
-                "symfony/finder": "",
-                "symfony/var-dumper": ""
+                "phpunit/phpunit": "4.*",
+                "satooshi/php-coveralls": "0.7.*@dev"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.7-dev"
-                }
-            },
             "autoload": {
                 "psr-0": {
-                    "Symfony\\Component\\HttpKernel\\": ""
+                    "voku": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "CC-BY-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Hamid Sarfraz",
+                    "homepage": "http://pageconfig.com/"
+                },
+                {
+                    "name": "Lars Moelleken",
+                    "homepage": "http://www.moelleken.org/"
+                }
+            ],
+            "description": "Portable UTF-8 library",
+            "homepage": "https://github.com/voku/portable-utf8",
+            "keywords": [
+                "UTF",
+                "clean",
+                "php",
+                "utf8"
+            ],
+            "time": "2015-02-20 13:37:33"
+        },
+        {
+            "name": "voku/simple-cache",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/voku/simple-cache.git",
+                "reference": "52b6e2875c464adaa416ff70675f86f56d85797d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/voku/simple-cache/zipball/52b6e2875c464adaa416ff70675f86f56d85797d",
+                "reference": "52b6e2875c464adaa416ff70675f86f56d85797d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "predis/predis": "1.0.*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*",
+                "satooshi/php-coveralls": "0.7.*@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "voku": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -544,17 +522,76 @@
             ],
             "authors": [
                 {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "name": "Lars Moelleken",
+                    "homepage": "http://www.moelleken.org/",
+                    "role": "Developer"
                 }
             ],
-            "description": "Symfony HttpKernel Component",
-            "homepage": "http://symfony.com",
-            "time": "2015-02-05 08:00:50"
+            "description": "Simple Cache library",
+            "homepage": "https://github.com/voku/simple-cache",
+            "keywords": [
+                "cache",
+                "caching",
+                "php",
+                "simple cache"
+            ],
+            "time": "2015-02-10 15:27:02"
+        },
+        {
+            "name": "voku/simple-mysqli",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/voku/simple-mysqli.git",
+                "reference": "11f5d8aca4331770b919382a1425421b01665477"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/voku/simple-mysqli/zipball/11f5d8aca4331770b919382a1425421b01665477",
+                "reference": "11f5d8aca4331770b919382a1425421b01665477",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "voku/portable-utf8": "1.*",
+                "voku/simple-cache": "1.*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*",
+                "satooshi/php-coveralls": "0.7.*@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "voku": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Tavares",
+                    "email": "the.entomb@gmail.com",
+                    "homepage": "https://github.com/entomb",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Lars Moelleken",
+                    "homepage": "http://www.moelleken.org/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Simple MySQLi library",
+            "homepage": "https://github.com/voku/simple-mysqli",
+            "keywords": [
+                "db",
+                "mysqli",
+                "php",
+                "simple db"
+            ],
+            "time": "2015-02-11 20:06:28"
         }
     ],
     "packages-dev": [],

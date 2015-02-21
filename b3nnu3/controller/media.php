@@ -35,7 +35,7 @@ class media extends defaults\no_template
             /**
              * @var $wideimage \WideImage\WideImage
              */
-            $wideimage = $this->_container->get('wideimage');
+            $wideimage = $this->_container['wideimage'];
             $this->_response->send();
             $img = $wideimage->load($img_path);
             $img = $img->resize('800', NULL, 'inside', 'down');

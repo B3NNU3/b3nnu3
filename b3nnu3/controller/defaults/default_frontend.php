@@ -25,7 +25,7 @@ abstract class default_frontend extends controller
         $this->_initDefaultStyles();
         $this->smarty = $this->_initSmarty();
         $this->_initCssStyles($this->smarty);
-        $this->parsedown = $this->_container->get('parsedown');
+        $this->parsedown = $this->_container['parsedown'];
 
         $date = new \DateTime;
         $this->smarty->assign('datetime', $date);
@@ -81,7 +81,7 @@ abstract class default_frontend extends controller
 
     protected function _initSmarty()
     {
-        return $this->_container->get('smarty');
+        return $this->_container['smarty'];
     }
 
     protected function _initCssStyles(\Smarty &$smarty)
@@ -103,7 +103,7 @@ abstract class default_frontend extends controller
         /**
          * @var $less_cache \Less_Cache
          */
-        $less_cache = $this->_container->get('less_cache');
+        $less_cache = $this->_container['less_cache'];
         $options = array(
             'cache_dir' => __ROOTDIR__ . '/src/css/',
             'compress' => true,
@@ -126,7 +126,7 @@ abstract class default_frontend extends controller
             /**
              * @var $less \Less_Parser
              */
-            $less = $this->_container->get('less');
+            $less = $this->_container['less'];
             $base_path = __ROOTDIR__ . '/src/less/';
             $file_path = $base_path . $file;
             $less->parseFile($file_path, '/src/css/');
@@ -158,7 +158,7 @@ abstract class default_frontend extends controller
         /**
          * @var $json \b3nnu3\core\dependencies\jsoncontent
          */
-        $json = $this->_container->get('json_content');
+        $json = $this->_container['json_content'];
         $contentvars = $json->getArrayFromContentJson($json_path);
         if ($contentvars) {
             foreach ($contentvars as $key => $value) {

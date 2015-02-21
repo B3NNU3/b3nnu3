@@ -22,6 +22,6 @@ abstract class database_frontend extends default_frontend
     public function __construct($container)
     {
         parent::__construct($container);
-        $this->db = $this->_container->get('database');
+        $this->db = $this->_container['database'];
     }
 }

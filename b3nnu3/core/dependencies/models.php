@@ -2,7 +2,7 @@
 
 namespace b3nnu3\core\dependencies;
 
-use \Symfony\Component\DependencyInjection\Container;
+use \Pimple\Container;
 
 class models
 {
@@ -12,11 +12,14 @@ class models
     static private $instances = array();
     /**
      * @var Container
+     *
+     * TODO build Models
      */
     static private $container;
 
     static public function inject(Container &$container)
     {
+        return;
         self::$container = $container;
         $modelroot = __ROOTDIR__ . self::MODELDIR;
         $iterator = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($modelroot));
@@ -36,10 +39,12 @@ class models
                 $search = array(self::MODELDIR, __ROOTDIR__, "/", ".php");
                 $replace = array("", "", '_', "");
                 $containername = "model_" . str_replace($search, $replace, $path);
-                if ($containername != "model_defaults_model") {
-                    $class = self::getInstance($class);
-                    self::$container->set($containername, $class);
-                }
+//                if ($containername != "model_defaults_model") {
+//                    self::$container[$containername] = function($c){
+//                        return self::getInstance($class);    
+//                    }
+//                    
+//                }
             }
         }
     }

@@ -3,7 +3,7 @@ namespace b3nnu3;
 
 use b3nnu3\core\notfound;
 use \Symfony\Component\HttpFoundation\Request;
-use \Symfony\Component\DependencyInjection\Container;
+use \Pimple\Container;
 
 /**
  * Class app
@@ -90,7 +90,7 @@ class app
     private function _prepareContainer()
     {
         $container = new Container();
-        $container->set('app', $this);
+        $container['app'] = $this;
         /** add external composer depencies */
         $dependencies = $this->_solveDependencies();
         foreach ($dependencies as $class) {

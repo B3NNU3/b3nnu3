@@ -20,7 +20,8 @@
         <link rel="stylesheet" type="text/css" href="{$css_file}">
         <script type="text/javascript">
             {* Load Head.Js Inline *}
-            {literal}(function (n, t) {
+            {literal}
+            (function (n, t) {
                 "use strict";
                 function r(n) {
                     a[a.length] = n
@@ -420,6 +421,9 @@
                     i.feature && i.feature("domloaded", !0)
                 })
             })(window);
+            /*
+             //# sourceMappingURL=head.min.js.map
+             */
             {/literal}
             head.load("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css", "//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js", "/src/js/responsiveslides.min.js", "/src/js/b3nnu3.js");
             {literal}

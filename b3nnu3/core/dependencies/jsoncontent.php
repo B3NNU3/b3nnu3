@@ -2,15 +2,16 @@
 
 namespace b3nnu3\core\dependencies;
 
-use \Symfony\Component\DependencyInjection\Container;
+use \Pimple\Container;
 
 class jsoncontent
 {
 
     static public function inject(Container &$container)
     {
-        $jsoncontent = new self();
-        $container->set('json_content', $jsoncontent, Container::SCOPE_CONTAINER);
+        $container['json_content'] = function () {
+            return new self();
+        };        
     }
 
     public function getArrayFromContentJson($path = false)
@@ -20,7 +21,6 @@ class jsoncontent
         } else {
             $file = __ROOTDIR__ . "/content/" . 'index/index.json';
         }
-//        var_dump($file); die();
         if (file_exists($file)) {
             $json = json_decode(file_get_contents($file), true);
             return $json;

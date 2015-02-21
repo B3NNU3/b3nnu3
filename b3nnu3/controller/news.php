@@ -2,7 +2,7 @@
 
 namespace b3nnu3\controller;
 
-use Symfony\Component\DependencyInjection\Container;
+use \Pimple\Container;
 
 /**
  * Class media

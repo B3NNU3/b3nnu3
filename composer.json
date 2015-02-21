@@ -18,12 +18,13 @@
   ],
   "require": {
     "symfony/http-foundation": "*",
-    "symfony/dependency-injection": "*",
+    "pimple/pimple": "*",
     "smarty/smarty": "*",
     "oyejorge/less.php": "*",
     "erusev/parsedown": "*",
     "smottt/wideimage": "*",
-    "monolog/monolog": "*"
+    "monolog/monolog": "*",
+    "voku/simple-mysqli": "*"
   },
   "autoload": {
     "psr-4": {"b3nnu3\\": "b3nnu3/"}
