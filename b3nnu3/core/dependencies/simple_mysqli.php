@@ -10,7 +10,7 @@ class simple_mysqli
 
     static public function inject(Container &$container)
     {
-        $container['database'] = function ($c) {
+        $container['database'] = function($c) {
             $app = $c['app'];
             $options = $app->config->getDatabase();
             /**

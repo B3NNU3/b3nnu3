@@ -9,8 +9,8 @@ class parsedown implements \b3nnu3\core\interfaces\dependency
 
     static function inject(Container &$container)
     {
-        $container['parsedown'] = function ($c) {
-            return new \Parsedown();
+        $container['parsedown'] = function($c){
+            return new \Parsedown();       
         };
     }
 }

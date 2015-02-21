@@ -14,7 +14,7 @@ class smarty implements \b3nnu3\core\interfaces\dependency
 
     private static function _initSmarty(Container &$container)
     {
-        $container['smarty'] = function ($c) {
+        $container['smarty'] = function($c){
             $app = $c['app'];
             $options = $app->config->getSmarty();
 

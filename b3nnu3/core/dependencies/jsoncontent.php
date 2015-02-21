@@ -9,8 +9,8 @@ class jsoncontent
 
     static public function inject(Container &$container)
     {
-        $container['json_content'] = function () {
-            return new self();
+        $container['json_content'] = function(){
+            return new self(); 
         };        
     }
 
