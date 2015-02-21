@@ -11,7 +11,8 @@ class less_php implements \b3nnu3\core\interfaces\dependency
     {
         $container['less'] = function($c){
             $app = $c['app'];
-            $options = $app->config->getLess();        
+            $options = $app->config->getLess();    
+            var_dump($options); die();
             return new \Less_Parser($options);
         };
 
