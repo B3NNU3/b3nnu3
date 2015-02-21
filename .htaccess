@@ -1,0 +1,73 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1/ [L,R=301]
+
+
+#RedirectPermanent /index http://www.b3nnu3.de
+
+ErrorDocument 403 /index.php
+ErrorDocument 404 /index.php
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* /index.php
+</IfModule>
+
+# Enable gzip compression
+<IfModule mod_deflate.c>
+SetOutputFilter DEFLATE
+SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip
+</IfModule>
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType text/javascript "access plus 1 month"
+ExpiresByType text/html "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+ExpiresByType image/gif "access plus 1 month"
+ExpiresByType image/jpeg "access plus 1 month"
+ExpiresByType image/png "access plus 1 month"
+ExpiresByType image/x-icon "access plus 1 month"
+</IfModule>
+<ifmodule mod_headers.c>
+<filesmatch "\\.(ico|jpe?g|png|gif|swf)$">
+Header set Cache-Control "max-age=2592000, public"
+</filesmatch>
+<filesmatch "\\.(css)$">
+Header set Cache-Control "max-age=604800, public"
+</filesmatch>
+<filesmatch "\\.(js)$">
+Header set Cache-Control "max-age=216000, private"
+</filesmatch>
+</ifmodule>
+
+# Disables auto directory index
+<IfModule mod_autoindex.c>
+	Options -Indexes
+</IfModule>
+
+<IfModule mod_negotiation.c>
+    Options -MultiViews
+</IfModule>
+
+<IfModule mod_php5.c>
+   php_flag phar.readonly off
+   php_flag magic_quotes_gpc off
+   php_flag session.auto_start off
+   php_flag suhosin.session.cryptua off
+   php_flag zend.ze1_compatibility_mode off
+   php_flag register_globals 1
+</IfModule>
+
+#<IfModule mod_deflate.c>
+   SetOutputFilter DEFLATE
+   Header append Vary User-Agent env=!dont-vary
+#</IfModule>

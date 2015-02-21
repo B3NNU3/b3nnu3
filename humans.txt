@@ -1,0 +1,10 @@
+/* Me */
+	Developer:Benjamin Schnoor
+	Contact: info [at] b3nnu3.de
+	From:Hamburg, Germany
+
+/* SITE */
+	Last update:2014/10/30
+	Language: Deutsch
+	Doctype:HTML5
+	IDE: PHP_Storm, Gimp

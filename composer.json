@@ -1,0 +1,31 @@
+{
+  "name": "b3nnu3/b3nnu3",
+  "description": "simple DI Based CMS",
+  "minimum-stability": "dev",
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/oyejorge/less.php"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/smottt/WideImage"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/smarty-php/smarty"
+    }
+  ],
+  "require": {
+    "symfony/http-foundation": "*",
+    "symfony/dependency-injection": "*",
+    "smarty/smarty": "*",
+    "oyejorge/less.php": "*",
+    "erusev/parsedown": "*",
+    "smottt/wideimage": "*",
+    "monolog/monolog": "*"
+  },
+  "autoload": {
+    "psr-4": {"b3nnu3\\": "b3nnu3/"}
+  }
+}
