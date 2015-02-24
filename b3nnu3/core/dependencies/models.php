@@ -43,8 +43,8 @@ class models
                 $containername = "model_" . str_replace($search, $replace, $path);
                 
                 if ($containername != "model_defaults_model" ) {
-                    self::$container[$containername] = function($c) use ($class){
-                        return new $class($c);                        
+                    self::$container[$containername] = function($container) use ($class){
+                        return new $class($container);                        
                     };                    
                 }
             }
